@@ -1,10 +1,7 @@
 import os
 
 from pymongo import MongoClient
-from dotenv import load_dotenv
 
-
-load_dotenv()
-MONGO_URI = os.getenv('MONGO_URI')
+MONGO_URI = 'mongodb://root:ea02910866ed4c0f9a982a489f606b76@mongo_db:27017/cronapi?authSource=admin'
 DB_NAME = MONGO_URI.split('/')[-1].split('?')[0]
 DB = MongoClient().get_database(DB_NAME)

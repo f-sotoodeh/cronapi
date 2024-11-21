@@ -11,9 +11,6 @@ services:
     container_name: cronapi
     networks:
       - cloudflare
-    environment:
-      - MONGO_URI=mongodb://root:ea02910866ed4c0f9a982a489f606b76@mongo_db:27017/cronapi?authSource=admin
-      - SECRET_KEY=idontgiveashit
 
 networks:
   cloudflare:
